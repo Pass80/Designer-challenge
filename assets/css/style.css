@@ -19,6 +19,7 @@ header {
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: right top;
+    height: 100vh;
 }
 
 .flying-bg {
@@ -71,7 +72,6 @@ header {
     width: 100%;
     font-size: 2rem;
     line-height: 2.8rem;
-    /* font-weight: 300; */
 }
 
 .hero p img {
@@ -99,7 +99,6 @@ header a {
 .info-1 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 20rem 10rem 20rem 20rem 20rem;
     gap: 5rem;
     padding: 10rem;
     padding-left: 15rem;
@@ -109,17 +108,17 @@ header a {
     font-size: 3.5rem;
 }
 
-.info-1 p {
+.info-1 p:nth-of-type(1) {
     font-size: 1.8rem;
-    /* font-weight: 300; */
     line-height: 2.8rem;
+    padding-bottom: 5rem;
 }
 
 .info-1 h2:nth-of-type(1) {
     font-size: 4rem;
     width: 80%;
     grid-column: 1/3;
-    grid-row: 1/2;
+    padding-bottom: 5rem;
 }
 
 .info-1 h2 img {
@@ -128,21 +127,23 @@ header a {
 
 .info-1 p:nth-of-type(1) {
     grid-column: 3/6;
-    grid-row: 1/2;
 }
 
 .info-1 h2:nth-of-type(2) {
     font-size: 4rem;
     width: 70%;
-    /* word-spacing: 0.5rem; */
     grid-column: 1/5;
-    grid-row: 3/4;
+    padding-bottom: 10rem;
 }
 
 .info-1 article {
     width: 72%;
     display: flex;
     gap: 1rem;
+}
+
+.info-1 article p {
+    padding-bottom: 5rem;
 }
 
 .info-1 article:nth-of-type(even) {
@@ -168,22 +169,18 @@ header a {
 
 .info-1 article:nth-of-type(1) {
     grid-column: 1/4;
-    grid-row: 4/5;
 }
 
 .info-1 article:nth-of-type(2) {
     grid-column: 4/7;
-    grid-row: 4/5;
 }
 
 .info-1 article:nth-of-type(3) {
     grid-column: 1/4;
-    grid-row: 5/6;
 }
 
 .info-1 article:nth-of-type(4) {
     grid-column: 4/7;
-    grid-row: 5/6;
 }
 
 /* steps Section */
@@ -191,7 +188,6 @@ header a {
 .steps {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row: repeat(4, 40rem);
     gap: 10rem;
     padding: 10rem;
     padding-left: 15rem;
@@ -201,7 +197,6 @@ header a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100%; */
     grid-column: 1/-1;
     text-align: center;
 }
@@ -215,11 +210,10 @@ header a {
 .steps-heading p {
     width: 55%;
     font-size: 1.8rem;
-    /* font-weight: 300; */
     line-height: 2.8rem;
 }
 
-.steps img {
+.step-img {
     width: 100%;
 }
 
@@ -237,7 +231,6 @@ header a {
 .step p {
     width: 80%;
     font-size: 1.8rem;
-    /* font-weight: 300; */
     line-height: 2.8rem;
 }
 
@@ -259,6 +252,7 @@ footer {
 
 footer h3 {
     font-size: 4rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
@@ -348,6 +342,10 @@ footer form button {
     text-align: center;
 }
 
+.modal p {
+    text-align: center;
+}
+
 .modal button {
     background-color: #3c30ff;
     color: #fff;
@@ -398,36 +396,22 @@ footer form button {
     .info-1 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 30rem 30rem 30rem 30rem 30rem;
         gap: 5rem;
         padding: 2rem;
         padding-left: 2rem;
     }
-    .info-1 h2:nth-of-type(1) {
-        grid-column: 1/-1;
-    }
-
-    .info-1 p:nth-of-type(1) {
-        grid-column: 1/-1;
-        grid-row: 2/3;
-    }
-
+    .info-1 h2:nth-of-type(1),
+    .info-1 p:nth-of-type(1),
     .info-1 h2:nth-of-type(2) {
         grid-column: 1/-1;
     }
 
-    .info-1 article:nth-of-type(1) {
-        grid-column: 1/3;
-    }
-
-    .info-1 article:nth-of-type(2) {
-        grid-column: 3/5;
-    }
-
+    .info-1 article:nth-of-type(1),
     .info-1 article:nth-of-type(3) {
         grid-column: 1/3;
     }
 
+    .info-1 article:nth-of-type(2),
     .info-1 article:nth-of-type(4) {
         grid-column: 3/5;
     }
@@ -435,11 +419,24 @@ footer form button {
     .steps {
         display: grid;
         grid-template-columns: 1fr;
-        grid-row: repeat(4, 40rem);
         gap: 4rem;
         padding: 2rem;
         padding-left: 2rem;
     }
+
+    .step-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .img1 {
+        grid-row: 3/4;
+    }
+
+    .img3 {
+        grid-row: 7/8;
+    }
+
     /* footer */
 
     footer {
@@ -448,6 +445,14 @@ footer form button {
 
     form {
         width: 80%;
+    }
+
+    .modal {
+        width: 90%;
+    }
+
+    .modal h2 {
+        width: 90%;
     }
 }
 
@@ -473,50 +478,40 @@ footer form button {
         display: grid;
         width: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 30rem);
         gap: 1rem;
         padding: 2rem;
         padding-left: 2rem;
     }
-    .info-1 h2:nth-of-type(1) {
-        grid-column: 1/-1;
-    }
 
-    .info-1 p:nth-of-type(1) {
-        grid-column: 1/-1;
-        grid-row: 2/3;
-    }
-
-    .info-1 h2:nth-of-type(2) {
-        grid-column: 1/-1;
-    }
-
-    .info-1 article:nth-of-type(1) {
-        grid-column: 1/-1;
-        grid-row: 4/5;
-    }
-
-    .info-1 article:nth-of-type(2) {
-        grid-column: 1/-1;
-        grid-row: 5/6;
-    }
-
-    .info-1 article:nth-of-type(3) {
-        grid-column: 1/-1;
-        grid-row: 6/7;
-    }
-
+    .info-1 h2:nth-of-type(1),
+    .info-1 p:nth-of-type(1),
+    .info-1 h2:nth-of-type(2),
+    .info-1 article:nth-of-type(1),
+    .info-1 article:nth-of-type(3),
+    .info-1 article:nth-of-type(2),
     .info-1 article:nth-of-type(4) {
         grid-column: 1/-1;
-        grid-row: 7/8;
     }
+
     .steps {
         display: grid;
         grid-template-columns: 1fr;
-        grid-row: repeat(4, 40rem);
         gap: 4rem;
         padding: 2rem;
         padding-left: 2rem;
+    }
+
+    .step-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .img1 {
+        grid-row: 3/4;
+    }
+
+    .img3 {
+        grid-row: 7/8;
     }
     /* footer */
 
@@ -526,5 +521,17 @@ footer form button {
 
     form {
         width: 80%;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+    .modal {
+        width: 90%;
+    }
+
+    .modal h2 {
+        width: 90%;
     }
 }
