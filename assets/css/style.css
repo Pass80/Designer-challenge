@@ -380,21 +380,38 @@ footer form button {
     html {
         font-size: 60%;
     }
+
+    header {
+        background-size: 60%;
+        height: 80vh;
+    }
+
+    .flying-bg {
+        width: 60%;
+    }
     .hero-container {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 33rem;
+        padding-top: 20rem;
     }
 
     .hero {
-        width: 80%;
+        width: 70%;
         padding-top: 0rem;
         padding-left: 2rem;
     }
 
+    .hero h1 {
+        width: 70%;
+        font-size: 4rem;
+    }
+
+    .hero p {
+        width: 80%;
+    }
+
     .info-1 {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 5rem;
         padding: 2rem;
@@ -417,7 +434,6 @@ footer form button {
     }
 
     .steps {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 4rem;
         padding: 2rem;
@@ -461,11 +477,17 @@ footer form button {
         font-size: 55%;
     }
 
+    header {
+        background-size: 67%;
+        height: 60%;
+    }
+
+    .flying-bg {
+        width: 60%;
+    }
+
     .hero-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 33rem;
+        padding-top: 28rem;
     }
 
     .hero {
@@ -474,9 +496,16 @@ footer form button {
         padding-left: 2rem;
     }
 
-    .info-1 {
-        display: grid;
+    .hero h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    .hero p {
         width: 100%;
+    }
+
+    .info-1 {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 2rem;
@@ -494,7 +523,6 @@ footer form button {
     }
 
     .steps {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 4rem;
         padding: 2rem;
